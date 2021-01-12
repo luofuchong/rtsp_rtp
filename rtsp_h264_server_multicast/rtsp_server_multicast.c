@@ -487,6 +487,7 @@ void* doClientWorker(void* arg)
 
     doClient(pClient->Sockfd, pClient->Ip, pClient->Port);
 
+    free(pClient->Ip);
     free(pClient);
     return NULL;
 }
